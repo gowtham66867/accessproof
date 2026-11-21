@@ -59,3 +59,11 @@ Hosted desktop demo captured on revision accessproof-00010-w6v; final production
 ## Submission status
 
 The final Google Form confirmed **Your response has been recorded.** on 21 November 2026. See [STATUS.md](STATUS.md) for the public verification record. No private contact details or editable form-response links are published.
+
+## Demo tool provenance
+
+- Oriane: searched video examples and inspected selected captions, spoken transcripts and on-screen text for campaign research. The film shows an actual crop of its content-analysis controls at 0:45. We did not analyse the whole result corpus or reuse creator footage.
+- Google Gemini: critiqued a public project fact packet and recommended clearer agent decisions, evidence boundaries, impact hypotheses and visible Oriane provenance. Editorial use only.
+- Google Cloud Text-to-Speech: en-IN-Neural2-D narration with speech-timed captions.
+- Production agent: implemented adaptive policy, at most two Tavily calls, source variety check, replan and human review. No LLM planner.
+- Impact: pilot hypotheses measured through answer completeness, response time and visitor decision usefulness. No revenue/adoption claim.

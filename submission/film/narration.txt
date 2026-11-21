@@ -7,14 +7,14 @@ For a wheelchair user, an unanswered detail can mean a wasted journey, an uncomf
 030s — 02 / THE BUSINESS PROBLEM
 Venues face the other side of that uncertainty. People cannot choose confidently when practical details are missing. Staff repeat answers across calls and messages, while useful information stays disconnected from the next visitor.
 
-045s — 03 / THE IDEA
-Meet AccessProof. A decision workspace that brings venue discovery, accessibility evidence, and a direct question into one flow. Every feature has its own status. Missing information stays unknown. Conflicting reports stay visible.
+045s — 03 / ORIANE CREATIVE RESEARCH
+Oriane helped us research the story. Its video search exposes captions, spoken transcripts, and text on screen. We inspected selected examples about practical access details. That informed our original campaign hook: five stars, three unanswered questions.
 
 060s — 04 / DISCOVER & COMPARE
 Start with real cafés in Indiranagar, Bengaluru. Serp A P I retrieves venue listings and explicit accessibility attributes. Compare entrances, seating, and toilets side by side. A high rating never becomes an accessibility claim.
 
 075s — 05 / TAVILY RESEARCH AGENT
-Tavily returns source excerpts. AccessProof creates a cited research brief. Each finding links back to its source, while separate sections show existing reports, unanswered questions, and disagreement. Source clues never certify accessibility.
+The agent checks source relevance and distinct domains. If fewer than two domains match, it replans the search. After at most two Tavily calls, it stops for your review. Its cited brief explains what remains unanswered.
 
 090s — 06 / THE HUMAN CHECKPOINT
 Review the brief, then approve or edit the question. A signed research receipt binds this brief to the venue and feature. It travels with the private room, so citations and research history survive a refresh.
@@ -25,11 +25,11 @@ Watch the timeline. Sources checked. Question reviewed. Question delivered. The 
 120s — 08 / THE TRUST LAYER
 An unsure reply leaves the gap open. An opposing report produces a conflict instead of replacing the first claim. Pending or failed delivery never gets a completed table milestone. Every recorded step stays inspectable.
 
-135s — 09 / THE COMMERCIAL HYPOTHESIS
-Our business hypothesis is simple. Free discovery for visitors, and paid enquiry management and profile maintenance for venues and hospitality groups. Next, we would test staff response rates, visitor decision usefulness, and willingness to pay.
+135s — 09 / IMPACT TO VALIDATE
+Our impact hypothesis is fewer uncertain journeys and more useful venue enquiries. A pilot would measure answer completeness, response time, and visitor decision usefulness. Free visitor discovery and paid venue workflows remain business hypotheses, without adoption or revenue claims.
 
 150s — 10 / BUILT TO DEMONSTRATE
-The prototype connects Tavily research, Nexconn delivery, and persistent evidence. Thirty four automated tests passed, including receipt tampering, contradictions, and retry handling. The complete research to reply journey was tested, including refresh recovery.
+Next.js coordinates Serp A P I, Tavily, and Nexconn. Firestore preserves the evidence on Cloud Run. Thirty four tests passed. For this film, Gemini reviewed the narrative, Oriane informed the campaign, and Google Text to Speech provides this voice.
 
 165s — ACCESSPROOF / GO BEYOND
 AccessProof turns an information gap into a question someone can answer, and keeps that answer attached to the decision. Because a great outing should begin with clearer plans. AccessProof. Find the evidence. Ask what is missing.

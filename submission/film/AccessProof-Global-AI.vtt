@@ -37,133 +37,145 @@ confidently when practical details are missing. Staff repeat answers across call
 and messages, while useful information stays disconnected from the next visitor.
 
 10
-00:00:45.464 --> 00:00:50.950
-Meet AccessProof. A decision workspace that brings venue discovery, accessibility evidence,
+00:00:45.461 --> 00:00:49.262
+Oriane helped us research the story. Its video search exposes captions,
 
 11
-00:00:50.950 --> 00:00:54.424
-and a direct question into one flow. Every feature has its
+00:00:49.262 --> 00:00:53.626
+spoken transcripts, and text on screen. We inspected selected examples about
 
 12
-00:00:54.424 --> 00:00:59.600
-own status. Missing information stays unknown. Conflicting reports stay visible.
+00:00:53.626 --> 00:00:57.791
+practical access details. That informed our original campaign hook: five stars,
 
 13
+00:00:57.791 --> 00:00:59.600
+three unanswered questions.
+
+14
 00:01:00.463 --> 00:01:04.405
 Start with real cafés in Indiranagar, Bengaluru. Serp A P I
 
-14
+15
 00:01:04.405 --> 00:01:10.047
 retrieves venue listings and explicit accessibility attributes. Compare entrances, seating, and
 
-15
+16
 00:01:10.047 --> 00:01:13.746
 toilets side by side. A high rating never becomes an accessibility
 
-16
+17
 00:01:13.746 --> 00:01:14.600
 claim.
 
-17
-00:01:15.463 --> 00:01:20.310
-Tavily returns source excerpts. AccessProof creates a cited research brief. Each
-
 18
-00:01:20.310 --> 00:01:23.672
-finding links back to its source, while separate sections show existing
+00:01:15.464 --> 00:01:19.490
+The agent checks source relevance and distinct domains. If fewer than
 
 19
-00:01:23.672 --> 00:01:29.600
-reports, unanswered questions, and disagreement. Source clues never certify accessibility.
+00:01:19.490 --> 00:01:23.283
+two domains match, it replans the search. After at most two
 
 20
+00:01:23.283 --> 00:01:27.783
+Tavily calls, it stops for your review. Its cited brief explains
+
+21
+00:01:27.783 --> 00:01:29.600
+what remains unanswered.
+
+22
 00:01:30.465 --> 00:01:34.415
 Review the brief, then approve or edit the question. A signed
 
-21
+23
 00:01:34.415 --> 00:01:38.379
 research receipt binds this brief to the venue and feature. It
 
-22
+24
 00:01:38.379 --> 00:01:42.471
 travels with the private room, so citations and research history survive
 
-23
+25
 00:01:42.471 --> 00:01:44.086
 a refresh.
 
-24
+26
 00:01:45.462 --> 00:01:50.240
 Watch the timeline. Sources checked. Question reviewed. Question delivered. The invited
 
-25
+27
 00:01:50.240 --> 00:01:54.421
 representative replies. The toilet cell changes from unknown to reported available,
 
-26
+28
 00:01:54.421 --> 00:01:58.298
 with author and earlier evidence attached. This fictional venue uses real
 
-27
+29
 00:01:58.298 --> 00:01:59.600
 Nexconn delivery.
 
-28
+30
 00:02:00.464 --> 00:02:04.562
 An unsure reply leaves the gap open. An opposing report produces
 
-29
+31
 00:02:04.562 --> 00:02:08.717
 a conflict instead of replacing the first claim. Pending or failed
 
-30
+32
 00:02:08.717 --> 00:02:13.311
 delivery never gets a completed table milestone. Every recorded step stays
 
-31
+33
 00:02:13.311 --> 00:02:14.600
 inspectable.
 
-32
-00:02:15.463 --> 00:02:19.495
-Our business hypothesis is simple. Free discovery for visitors, and paid
-
-33
-00:02:19.495 --> 00:02:24.433
-enquiry management and profile maintenance for venues and hospitality groups. Next,
-
 34
-00:02:24.433 --> 00:02:28.510
-we would test staff response rates, visitor decision usefulness, and willingness
+00:02:15.461 --> 00:02:18.505
+Our impact hypothesis is fewer uncertain journeys and more useful venue
 
 35
-00:02:28.510 --> 00:02:29.600
-to pay.
+00:02:18.505 --> 00:02:22.665
+enquiries. A pilot would measure answer completeness, response time, and visitor
 
 36
-00:02:30.462 --> 00:02:35.214
-The prototype connects Tavily research, Nexconn delivery, and persistent evidence. Thirty
+00:02:22.665 --> 00:02:26.688
+decision usefulness. Free visitor discovery and paid venue workflows remain business
 
 37
-00:02:35.214 --> 00:02:40.394
-four automated tests passed, including receipt tampering, contradictions, and retry handling.
+00:02:26.688 --> 00:02:29.600
+hypotheses, without adoption or revenue claims.
 
 38
-00:02:40.394 --> 00:02:44.600
-The complete research to reply journey was tested, including refresh recovery.
+00:02:30.462 --> 00:02:35.445
+Next.js coordinates Serp A P I, Tavily, and Nexconn. Firestore preserves
 
 39
+00:02:35.445 --> 00:02:38.690
+the evidence on Cloud Run. Thirty four tests passed. For this
+
+40
+00:02:38.690 --> 00:02:42.339
+film, Gemini reviewed the narrative, Oriane informed the campaign, and Google
+
+41
+00:02:42.339 --> 00:02:44.600
+Text to Speech provides this voice.
+
+42
 00:02:45.464 --> 00:02:49.673
 AccessProof turns an information gap into a question someone can answer,
 
-40
+43
 00:02:49.673 --> 00:02:53.317
 and keeps that answer attached to the decision. Because a great
 
-41
+44
 00:02:53.317 --> 00:02:58.405
 outing should begin with clearer plans. AccessProof. Find the evidence. Ask
 
-42
+45
 00:02:58.405 --> 00:02:59.600
 what is missing.
