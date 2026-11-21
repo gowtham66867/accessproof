@@ -54,4 +54,8 @@ The final Google Form requires the participant’s team details and a recorded s
 
 34 automated checks cover exact citation-to-excerpt mapping, empty research, signed-receipt tampering/expiry/venue-feature-mode binding, durable review-to-delivery steps, unsure/failed/pending replies, conflicts and duplicate reports. Full local and hosted Nexconn journeys were exercised: cited fixtures → human-reviewed question → delivered representative report → table milestone → refresh reconstruction. The real Tavily brief was also checked for an Indiranagar café; one matched contextual source clue did not resolve its toilet question. No false positive accessibility claim was created.
 
-Final deployed app revision: accessproof-00010-w6v. The desktop demo shows the compact timeline, attributed before/after banner and changed comparison cell together. Hosted signed-brief integration also verified an unsure reply, opposing reports, retry deduplication and conflict recovery after refresh.
+Hosted desktop demo captured on revision accessproof-00010-w6v; final production status-color polish is deployed as accessproof-00011-flf. The desktop demo shows the compact timeline, attributed before/after banner and changed comparison cell together. Hosted signed-brief integration also verified an unsure reply, opposing reports, retry deduplication and conflict recovery after refresh.
+
+## Submission status
+
+The final Google Form confirmed **Your response has been recorded.** on 21 November 2026. See [STATUS.md](STATUS.md) for the public verification record. No private contact details or editable form-response links are published.
