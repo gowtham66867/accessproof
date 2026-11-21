@@ -1,0 +1,7 @@
+AccessProof — Global AI Hackathon / Tavily Research Agent / 180-second film
+Adaptation of an existing Beyond 9TO5 MVP created on 21 November 2026. Eligibility of reused work and any deadline extension requires organizer confirmation.
+Voice: Google Cloud Text-to-Speech en-IN-Neural2-D.
+Original motion graphics and procedural ambient soundtrack. Product visuals are animated captures of actual hosted tests, not a continuous screen recording. Fictional demo fixtures are labelled. Nexconn test delivery was real.
+Creative direction uses the existing Oriane caption/transcript research in accessproof-campaign/oriane-observations.txt: practical access details, expectation versus reality, and the original hook Five stars. Three unanswered questions. No creator footage or celebrity voice used. No new Oriane search credits needed.
+Research agent is bounded adaptive policy, no LLM planner. Reports are attributed claims, not certification. Business model remains a hypothesis.
+Google neural voice pricing documentation: https://cloud.google.com/text-to-speech/pricing

@@ -1,0 +1,175 @@
+1
+00:00:00,465 --> 00:00:05,585
+A beautiful café. Five stars. Hundreds of reviews. But three questions
+
+2
+00:00:05,585 --> 00:00:09,550
+can still decide whether someone can visit. Can I get inside?
+
+3
+00:00:09,550 --> 00:00:12,310
+Reach a table? And use the toilet?
+
+4
+00:00:15,465 --> 00:00:19,043
+For a wheelchair user, an unanswered detail can mean a wasted
+
+5
+00:00:19,043 --> 00:00:24,201
+journey, an uncomfortable conversation, or a cancelled plan. The problem is
+
+6
+00:00:24,201 --> 00:00:28,438
+not a lack of places. It is uncertainty before the journey.
+
+7
+00:00:30,464 --> 00:00:34,486
+Venues face the other side of that uncertainty. People cannot choose
+
+8
+00:00:34,486 --> 00:00:39,436
+confidently when practical details are missing. Staff repeat answers across calls
+
+9
+00:00:39,436 --> 00:00:44,600
+and messages, while useful information stays disconnected from the next visitor.
+
+10
+00:00:45,464 --> 00:00:50,950
+Meet AccessProof. A decision workspace that brings venue discovery, accessibility evidence,
+
+11
+00:00:50,950 --> 00:00:54,424
+and a direct question into one flow. Every feature has its
+
+12
+00:00:54,424 --> 00:00:59,600
+own status. Missing information stays unknown. Conflicting reports stay visible.
+
+13
+00:01:00,463 --> 00:01:04,405
+Start with real cafés in Indiranagar, Bengaluru. Serp A P I
+
+14
+00:01:04,405 --> 00:01:10,047
+retrieves venue listings and explicit accessibility attributes. Compare entrances, seating, and
+
+15
+00:01:10,047 --> 00:01:13,746
+toilets side by side. A high rating never becomes an accessibility
+
+16
+00:01:13,746 --> 00:01:14,600
+claim.
+
+17
+00:01:15,464 --> 00:01:18,686
+When a detail is missing, the research agent uses Tavily to
+
+18
+00:01:18,686 --> 00:01:23,482
+check public sources. It assesses venue and locality matches, and adapts
+
+19
+00:01:23,482 --> 00:01:27,158
+its query if the first check is insufficient. The budget is
+
+20
+00:01:27,158 --> 00:01:29,600
+bounded: at most two searches.
+
+21
+00:01:30,464 --> 00:01:34,545
+The agent drafts a specific question, then stops for your review.
+
+22
+00:01:34,545 --> 00:01:38,141
+It is an explainable policy agent, without a large language model
+
+23
+00:01:38,141 --> 00:01:42,832
+planner. Search clues never update the accessibility table. You control the
+
+24
+00:01:42,832 --> 00:01:44,600
+question and invitation.
+
+25
+00:01:45,464 --> 00:01:49,295
+Now watch the moment that matters. This venue is fictional, but
+
+26
+00:01:49,295 --> 00:01:54,175
+the Nexconn delivery is real. The representative answers the toilet question.
+
+27
+00:01:54,175 --> 00:01:58,224
+The visitor's table changes from unknown to reported available, with author
+
+28
+00:01:58,224 --> 00:01:59,600
+and time.
+
+29
+00:02:00,463 --> 00:02:03,865
+Open the evidence and inspect what was said. An unsure answer
+
+30
+00:02:03,865 --> 00:02:08,194
+leaves the question unresolved. An opposing report creates a conflict. A
+
+31
+00:02:08,194 --> 00:02:12,365
+representative report is an attributed claim, not an independent inspection or
+
+32
+00:02:12,365 --> 00:02:14,600
+an accessibility certificate.
+
+33
+00:02:15,463 --> 00:02:19,495
+Our business hypothesis is simple. Free discovery for visitors, and paid
+
+34
+00:02:19,495 --> 00:02:24,433
+enquiry management and profile maintenance for venues and hospitality groups. Next,
+
+35
+00:02:24,433 --> 00:02:28,510
+we would test staff response rates, visitor decision usefulness, and willingness
+
+36
+00:02:28,510 --> 00:02:29,600
+to pay.
+
+37
+00:02:30,464 --> 00:02:35,398
+The working prototype connects Tavily research, private Nexconn chat, and persistent
+
+38
+00:02:35,398 --> 00:02:40,786
+evidence on Cloud Run. Twenty seven automated tests passed. Real research
+
+39
+00:02:40,786 --> 00:02:43,454
+and the live reply to table flow were tested end to
+
+40
+00:02:43,454 --> 00:02:44,600
+end.
+
+41
+00:02:45,464 --> 00:02:49,673
+AccessProof turns an information gap into a question someone can answer,
+
+42
+00:02:49,673 --> 00:02:53,317
+and keeps that answer attached to the decision. Because a great
+
+43
+00:02:53,317 --> 00:02:58,405
+outing should begin with clearer plans. AccessProof. Find the evidence. Ask
+
+44
+00:02:58,405 --> 00:02:59,600
+what is missing.
