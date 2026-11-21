@@ -1,3 +1,4 @@
+import { issueResearchReceipt } from "@/lib/research-receipt";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { authorizedDemoRequest } from "@/lib/demo-auth";
@@ -82,7 +83,7 @@ export async function POST(request: Request) {
         ].slice(demoChecks === 1 ? 0 : 1, demoChecks === 1 ? 1 : 2);
       },
     );
-    return NextResponse.json(result, {
+    return NextResponse.json({ ...result, receipt: issueResearchReceipt(result, input.venue) }, {
       headers: { "Cache-Control": "no-store" },
     });
   }
@@ -104,7 +105,7 @@ export async function POST(request: Request) {
   const hit = cache.get(cacheKey);
   if (hit)
     return NextResponse.json(
-      { ...(await hit.job), reused: true },
+      { ...(await hit.job), reused: true, receipt: issueResearchReceipt({ ...(await hit.job), reused: true }, input.venue) },
       {
         headers: {
           "Cache-Control": "no-store",
@@ -126,7 +127,8 @@ export async function POST(request: Request) {
   const job = runResearchAgent(input, (q) => searchTavilySources(q, key));
   cache.set(cacheKey, { expires: time + 600000, job });
   try {
-    return NextResponse.json(await job, {
+    const result = await job;
+    return NextResponse.json({ ...result, receipt: issueResearchReceipt(result, input.venue) }, {
       headers: {
         "Cache-Control": "no-store",
         "X-AccessProof-Agent-Cache": "miss",

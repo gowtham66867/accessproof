@@ -14,22 +14,22 @@ Meet AccessProof. A decision workspace that brings venue discovery, accessibilit
 Start with real cafés in Indiranagar, Bengaluru. Serp A P I retrieves venue listings and explicit accessibility attributes. Compare entrances, seating, and toilets side by side. A high rating never becomes an accessibility claim.
 
 075s — 05 / TAVILY RESEARCH AGENT
-When a detail is missing, the research agent uses Tavily to check public sources. It assesses venue and locality matches, and adapts its query if the first check is insufficient. The budget is bounded: at most two searches.
+Tavily returns source excerpts. AccessProof creates a cited research brief. Each finding links back to its source, while separate sections show existing reports, unanswered questions, and disagreement. Source clues never certify accessibility.
 
 090s — 06 / THE HUMAN CHECKPOINT
-The agent drafts a specific question, then stops for your review. It is an explainable policy agent, without a large language model planner. Search clues never update the accessibility table. You control the question and invitation.
+Review the brief, then approve or edit the question. A signed research receipt binds this brief to the venue and feature. It travels with the private room, so citations and research history survive a refresh.
 
 105s — 07 / THE WOW MOMENT
-Now watch the moment that matters. This venue is fictional, but the Nexconn delivery is real. The representative answers the toilet question. The visitor's table changes from unknown to reported available, with author and time.
+Watch the timeline. Sources checked. Question reviewed. Question delivered. The invited representative replies. The toilet cell changes from unknown to reported available, with author and earlier evidence attached. This fictional venue uses real Nexconn delivery.
 
 120s — 08 / THE TRUST LAYER
-Open the evidence and inspect what was said. An unsure answer leaves the question unresolved. An opposing report creates a conflict. A representative report is an attributed claim, not an independent inspection or an accessibility certificate.
+An unsure reply leaves the gap open. An opposing report produces a conflict instead of replacing the first claim. Pending or failed delivery never gets a completed table milestone. Every recorded step stays inspectable.
 
 135s — 09 / THE COMMERCIAL HYPOTHESIS
 Our business hypothesis is simple. Free discovery for visitors, and paid enquiry management and profile maintenance for venues and hospitality groups. Next, we would test staff response rates, visitor decision usefulness, and willingness to pay.
 
 150s — 10 / BUILT TO DEMONSTRATE
-The working prototype connects Tavily research, private Nexconn chat, and persistent evidence on Cloud Run. Twenty seven automated tests passed. Real research and the live reply to table flow were tested end to end.
+The prototype connects Tavily research, Nexconn delivery, and persistent evidence. Thirty four automated tests passed, including receipt tampering, contradictions, and retry handling. The complete research to reply journey was tested, including refresh recovery.
 
 165s — ACCESSPROOF / GO BEYOND
 AccessProof turns an information gap into a question someone can answer, and keeps that answer attached to the decision. Because a great outing should begin with clearer plans. AccessProof. Find the evidence. Ask what is missing.

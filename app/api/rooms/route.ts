@@ -1,3 +1,4 @@
+import { readResearchReceipt } from "@/lib/research-receipt";
 import { NextResponse } from "next/server";
 import { randomBytes, randomUUID } from "node:crypto";
 import { createRoomSchema } from "@/lib/room-validation";
@@ -89,11 +90,16 @@ export async function POST(request: Request) {
       );
     }
   }
+  const { researchReceipt, ...roomInput } = parsed.data;
+  const research = researchReceipt ? readResearchReceipt(researchReceipt, parsed.data.venue, parsed.data.requirement, parsed.data.datasetMode) : null;
+  if (researchReceipt && !research)
+    return NextResponse.json({ error: "Research expired or does not match this venue. Run the research check again." }, { status: 400 });
   const id = "ap" + randomBytes(12).toString("hex");
   const visitorKey = newCapability(),
     representativeKey = newCapability();
   const room: StoredRoom = {
-    ...parsed.data,
+    ...roomInput,
+    ...(research ? { research } : {}),
     id,
     visitorId: id + "v",
     representativeId: id + "r",
@@ -130,6 +136,7 @@ export async function POST(request: Request) {
           message.text,
         );
         message.delivery = "delivered";
+        message.deliveredAt = new Date().toISOString();
       } catch {
         message.delivery = "failed";
       }

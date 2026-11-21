@@ -1,4 +1,6 @@
 "use client";
+import LiveTimeline from "./live-timeline";
+import ResearchBriefView from "./research-brief";
 import {
   useCallback,
   useEffect,
@@ -292,6 +294,8 @@ export default function ConfirmationRoom({
           being used.
         </div>
       )}
+      {snapshot.role === "visitor" && <LiveTimeline snapshot={snapshot} />}
+      {snapshot.research && <details className="room-research"><summary>Inspect saved research brief & citations</summary><ResearchBriefView run={snapshot.research} /></details>}
       <div className="room-identity">
         <ShieldCheck size={18} />
         <span>

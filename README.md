@@ -175,3 +175,13 @@ The [`submission/`](submission/SUBMISSION.md) folder contains the Global AI deck
 - **Google Cloud Text-to-Speech:** Indian English synthetic narration in the submission film.
 
 No Bifrost or LLM planner is integrated. Source snippets are unverified clues; representative reports are attributed claims, not independent inspections or accessibility certification.
+
+## Cited brief and durable live timeline
+
+Each research run now returns an extractive brief: exact bounded source excerpts with numbered links, existing attributed reports, unanswered feature questions, and a disagreement note. It does not manufacture a positive accessibility finding. The human-reviewed draft carries a server-signed research receipt into room creation. The receipt binds venue, initial evidence, feature and dataset mode, expires after one hour, and is checked before provisioning the room. Private visit notes never enter search. The signed receipt is not stored in the room or sent to Nexconn. The public-source brief itself is saved privately with the room.
+
+The visitor timeline derives recorded steps from that brief and durable room messages: sources checked, question reviewed/saved, question delivered, representative reply, and table reconciliation. Provider acknowledgement has its own `deliveredAt` timestamp. Pending, failed or unsure replies do not produce a completed table-update event. Opposing definite reports produce a conflict event. Stable message IDs prevent duplicate milestones. Refresh reconstructs the same timeline from stored data.
+
+The one-click demo first shows the fictional cited brief and editable question. Choose **Approve question & open live demo**, then prepare and send the representative report in the right pane. This fixture research consumes no Tavily credits; transport is real Nexconn.
+
+`node --env-file=.env.local --import tsx scripts/test-research-journey-live.ts` tests the complete signed-brief → reviewed-question → real Nexconn → evidence/timeline → refresh/retry journey. It creates a fictional demo room. Unit checks include tampering, mismatched receipts, empty sources, failed/unsure delivery, conflicts and deduplication.

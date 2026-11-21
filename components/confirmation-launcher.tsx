@@ -23,6 +23,7 @@ export default function ConfirmationLauncher({
     questionFor(requirement) +
       (detail ? `\nPlease also confirm: ${detail}` : ""),
   );
+  const [researchReceipt, setResearchReceipt] = useState<string | undefined>();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   async function create(mode: "nexconn" | "rehearsal") {
@@ -38,6 +39,7 @@ export default function ConfirmationLauncher({
           datasetMode,
           mode,
           question,
+          researchReceipt,
         }),
         signal: AbortSignal.timeout(40000),
       });
@@ -63,14 +65,10 @@ export default function ConfirmationLauncher({
         requirement={requirement}
         mode={datasetMode}
         hasDetail={Boolean(detail.trim())}
-        onUseDraft={(result) =>
-          setQuestion(
-            (
-              result.draftQuestion +
-              (detail ? `\nPlease also confirm: ${detail}` : "")
-            ).slice(0, 1500),
-          )
-        }
+        onUseDraft={(result) => {
+          setResearchReceipt(result.receipt);
+          setQuestion((result.draftQuestion + (detail ? `\nPlease also confirm: ${detail}` : "")).slice(0, 1500));
+        }}
       />
       <label className="question-editor">
         Your question

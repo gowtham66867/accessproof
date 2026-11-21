@@ -85,6 +85,7 @@ export async function POST(
         message.text,
       );
       message.delivery = "delivered";
+      message.deliveredAt = new Date().toISOString();
     } catch {
       message.delivery = "failed";
     }

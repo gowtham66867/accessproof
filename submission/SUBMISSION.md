@@ -9,7 +9,7 @@
 A venue’s star rating often leaves practical access questions unanswered: entrance, seating and toilets. Visitors risk wasted journeys; venues receive repeated enquiries and may lose visits when details are unclear. These commercial effects are hypotheses, not measured customer results.
 
 ## Solution and agent loop
-SerpApi discovers real venues and explicit Maps attributes. The bounded research agent inspects an evidence gap, calls Tavily Search, filters for venue/locality and accessibility relevance, checks distinct source domains, and replans when its first check is insufficient. It creates a cited question draft and stops for human review. At most two basic search calls per run. It has no LLM planner and does not use Tavily's separately billed Research endpoint.
+SerpApi discovers real venues and explicit Maps attributes. The bounded research agent inspects an evidence gap, calls Tavily Search, filters for venue/locality and accessibility relevance, checks distinct source domains, and replans when its first check is insufficient. It creates an extractive cited research brief: quoted source excerpts, numbered links, existing reports, unanswered questions and disagreement. A reviewed question carries a signed receipt into room creation; the privately saved brief survives refresh. At most two basic search calls per run. It has no LLM planner and does not use Tavily's separately billed Research endpoint.
 
 The reviewed question enters a private Nexconn room. An invited representative can answer available, unavailable, or unsure. Only a definite delivered report enters the evidence table; the update keeps author, time, previous state, and any contradiction. Representative ownership is not independently verified. Reports are claims, not certification.
 
@@ -20,7 +20,7 @@ The reviewed question enters a private Nexconn room. An invited representative c
 4. Inspect the Tavily action trace, source excerpts/links, and stopping condition. A lack of matched sources stays unresolved.
 5. Choose “Use agent draft for my question”, review, and ask the venue.
 6. Open the side-by-side demo, use a fictional representative report, and send it.
-7. Watch **Unknown → Reported available**, then inspect the attributed evidence.
+7. Watch the timeline gain **Representative replied** and **Cell updated** as the cell changes **Unknown → Reported available**. Inspect the report and saved citations; refresh to restore the same timeline.
 
 The fictional demo mode uses clearly labelled fixtures and zero Tavily calls. It still uses real Nexconn delivery. No business is automatically contacted.
 
@@ -34,13 +34,13 @@ The fictional demo mode uses clearly labelled fixtures and zero Tavily calls. It
 The video is exactly three minutes, with Google Cloud Indian English neural narration, original graphics/music and animated product captures. The demo is a captured hosted test, not continuous live screen recording. Oriane caption/transcript research informed the original campaign hook; no creator footage or celebrity voice was reused.
 
 ## Validation
-27 automated tests passed, with TypeScript and production build. The first real Tavily research run checked **tribal brew daily | Indiranagar**, used two searches, returned one accepted clue from pagenearby.com, preserved toilet status **Unknown**, and reused the cached result on repetition. This demonstrates API and workflow behavior, not independent accuracy of that source. The same Tavily research and cache check passed on hosted revision accessproof-00005-smc. Hosted Nexconn integration checks also passed: two provider tokens, private group creation, delivered report, unknown-to-available transition, retained author/time/provider ID, rejected invalid roles, idempotent retries, unsure answers and persistent conflicts. GitHub CI and Pages deployment passed for the initial published commit.
+34 automated tests passed, with TypeScript and production build. The first real Tavily research run checked **tribal brew daily | Indiranagar**, used two searches, returned one accepted clue from pagenearby.com, preserved toilet status **Unknown**, and reused the cached result on repetition. This demonstrates API and workflow behavior, not independent accuracy of that source. The same Tavily research and cache check passed on hosted revision accessproof-00005-smc. Hosted Nexconn integration checks also passed: two provider tokens, private group creation, delivered report, unknown-to-available transition, retained author/time/provider ID, rejected invalid roles, idempotent retries, unsure answers and persistent conflicts. GitHub CI and Pages deployment passed for the initial published commit.
 
 ## Business hypothesis
 Free discovery for visitors; paid enquiry management and profile maintenance for venues/hospitality groups. Staff response rates, usefulness to visitors and willingness to pay remain to be validated. Payment never improves an evidence status.
 
 ## Provenance and eligibility
-The baseline AccessProof MVP was developed for Beyond 9TO5 on **21 November 2026**. This submission is an extension of that existing work with Tavily integration and revised materials. It does not claim that the baseline was developed during Global AI Hackathon’s original build window. Confirm acceptance of reused projects and any final-submission extension with the organizers before submitting. This repository and its documents are not a completed competition submission.
+The baseline AccessProof MVP was developed for Beyond 9TO5 on **21 November 2026**. This submission is an extension of that existing work with Tavily integration and revised materials. It does not claim that the baseline was developed during Global AI Hackathon’s original build window. Confirm acceptance of reused projects and any final-submission extension with the organizers before submitting. Publishing this repository alone does not complete the competition submission.
 
 No Bifrost integration is claimed. AI coding assistance was used for implementation and presentation assets. Keys, passphrases, runtime data, transcripts and private invitation links are excluded from the repository.
 
@@ -48,4 +48,10 @@ No Bifrost integration is claimed. AI coding assistance was used for implementat
 
 Use the public judge preview URL for the video field and the PDF link above for the PPT field. The source repository is public. Hosted Tavily source research was additionally exercised in the browser and returned the same one-clue result with the table unchanged.
 
-The final Google Form still needs the actual team details and a submission by the participant. It requests GitHub usernames and confirmation of the sponsor repository star; this repository does not claim those participant actions have been completed. No form has been submitted. Do not publish demo passphrases in public descriptions or repository files.
+The final Google Form requires the participant’s team details and a recorded submission confirmation. It requests GitHub usernames and confirmation of the sponsor repository star; the Google Form receipt, rather than this guide, confirms completion. Do not publish demo passphrases in public descriptions or repository files.
+
+## Brief and timeline extension validation
+
+34 automated checks cover exact citation-to-excerpt mapping, empty research, signed-receipt tampering/expiry/venue-feature-mode binding, durable review-to-delivery steps, unsure/failed/pending replies, conflicts and duplicate reports. Full local and hosted Nexconn journeys were exercised: cited fixtures → human-reviewed question → delivered representative report → table milestone → refresh reconstruction. The real Tavily brief was also checked for an Indiranagar café; one matched contextual source clue did not resolve its toilet question. No false positive accessibility claim was created.
+
+Final deployed app revision: accessproof-00010-w6v. The desktop demo shows the compact timeline, attributed before/after banner and changed comparison cell together. Hosted signed-brief integration also verified an unsure reply, opposing reports, retry deduplication and conflict recovery after refresh.

@@ -1,3 +1,4 @@
+import type { AgentResearch } from "./agent";
 import {
   evidenceStatus,
   statusLabels,
@@ -19,6 +20,7 @@ export type RoomMessage = {
   answer?: "available" | "unavailable" | "unsure";
   delivery: "pending" | "delivered" | "failed";
   providerMessageId?: string;
+  deliveredAt?: string;
 };
 export type RoomSnapshot = {
   id: string;
@@ -28,6 +30,7 @@ export type RoomSnapshot = {
   datasetMode: "demo" | "live";
   requirement: Requirement;
   messages: RoomMessage[];
+  research?: AgentResearch;
   createdAt: string;
   expiresAt: string;
 };

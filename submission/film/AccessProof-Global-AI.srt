@@ -63,113 +63,105 @@ toilets side by side. A high rating never becomes an accessibility
 claim.
 
 17
-00:01:15,464 --> 00:01:18,686
-When a detail is missing, the research agent uses Tavily to
+00:01:15,463 --> 00:01:20,310
+Tavily returns source excerpts. AccessProof creates a cited research brief. Each
 
 18
-00:01:18,686 --> 00:01:23,482
-check public sources. It assesses venue and locality matches, and adapts
+00:01:20,310 --> 00:01:23,672
+finding links back to its source, while separate sections show existing
 
 19
-00:01:23,482 --> 00:01:27,158
-its query if the first check is insufficient. The budget is
+00:01:23,672 --> 00:01:29,600
+reports, unanswered questions, and disagreement. Source clues never certify accessibility.
 
 20
-00:01:27,158 --> 00:01:29,600
-bounded: at most two searches.
+00:01:30,465 --> 00:01:34,415
+Review the brief, then approve or edit the question. A signed
 
 21
-00:01:30,464 --> 00:01:34,545
-The agent drafts a specific question, then stops for your review.
+00:01:34,415 --> 00:01:38,379
+research receipt binds this brief to the venue and feature. It
 
 22
-00:01:34,545 --> 00:01:38,141
-It is an explainable policy agent, without a large language model
+00:01:38,379 --> 00:01:42,471
+travels with the private room, so citations and research history survive
 
 23
-00:01:38,141 --> 00:01:42,832
-planner. Search clues never update the accessibility table. You control the
+00:01:42,471 --> 00:01:44,086
+a refresh.
 
 24
-00:01:42,832 --> 00:01:44,600
-question and invitation.
+00:01:45,462 --> 00:01:50,240
+Watch the timeline. Sources checked. Question reviewed. Question delivered. The invited
 
 25
-00:01:45,464 --> 00:01:49,295
-Now watch the moment that matters. This venue is fictional, but
+00:01:50,240 --> 00:01:54,421
+representative replies. The toilet cell changes from unknown to reported available,
 
 26
-00:01:49,295 --> 00:01:54,175
-the Nexconn delivery is real. The representative answers the toilet question.
+00:01:54,421 --> 00:01:58,298
+with author and earlier evidence attached. This fictional venue uses real
 
 27
-00:01:54,175 --> 00:01:58,224
-The visitor's table changes from unknown to reported available, with author
+00:01:58,298 --> 00:01:59,600
+Nexconn delivery.
 
 28
-00:01:58,224 --> 00:01:59,600
-and time.
+00:02:00,464 --> 00:02:04,562
+An unsure reply leaves the gap open. An opposing report produces
 
 29
-00:02:00,463 --> 00:02:03,865
-Open the evidence and inspect what was said. An unsure answer
+00:02:04,562 --> 00:02:08,717
+a conflict instead of replacing the first claim. Pending or failed
 
 30
-00:02:03,865 --> 00:02:08,194
-leaves the question unresolved. An opposing report creates a conflict. A
+00:02:08,717 --> 00:02:13,311
+delivery never gets a completed table milestone. Every recorded step stays
 
 31
-00:02:08,194 --> 00:02:12,365
-representative report is an attributed claim, not an independent inspection or
+00:02:13,311 --> 00:02:14,600
+inspectable.
 
 32
-00:02:12,365 --> 00:02:14,600
-an accessibility certificate.
-
-33
 00:02:15,463 --> 00:02:19,495
 Our business hypothesis is simple. Free discovery for visitors, and paid
 
-34
+33
 00:02:19,495 --> 00:02:24,433
 enquiry management and profile maintenance for venues and hospitality groups. Next,
 
-35
+34
 00:02:24,433 --> 00:02:28,510
 we would test staff response rates, visitor decision usefulness, and willingness
 
-36
+35
 00:02:28,510 --> 00:02:29,600
 to pay.
 
+36
+00:02:30,462 --> 00:02:35,214
+The prototype connects Tavily research, Nexconn delivery, and persistent evidence. Thirty
+
 37
-00:02:30,464 --> 00:02:35,398
-The working prototype connects Tavily research, private Nexconn chat, and persistent
+00:02:35,214 --> 00:02:40,394
+four automated tests passed, including receipt tampering, contradictions, and retry handling.
 
 38
-00:02:35,398 --> 00:02:40,786
-evidence on Cloud Run. Twenty seven automated tests passed. Real research
+00:02:40,394 --> 00:02:44,600
+The complete research to reply journey was tested, including refresh recovery.
 
 39
-00:02:40,786 --> 00:02:43,454
-and the live reply to table flow were tested end to
-
-40
-00:02:43,454 --> 00:02:44,600
-end.
-
-41
 00:02:45,464 --> 00:02:49,673
 AccessProof turns an information gap into a question someone can answer,
 
-42
+40
 00:02:49,673 --> 00:02:53,317
 and keeps that answer attached to the decision. Because a great
 
-43
+41
 00:02:53,317 --> 00:02:58,405
 outing should begin with clearer plans. AccessProof. Find the evidence. Ask
 
-44
+42
 00:02:58,405 --> 00:02:59,600
 what is missing.

@@ -1,4 +1,5 @@
 "use client";
+import ResearchBriefView from "./research-brief";
 import { useState } from "react";
 import { Search, LoaderCircle } from "lucide-react";
 import type { Requirement, Venue } from "@/lib/evidence";
@@ -14,9 +15,9 @@ export default function ResearchAgent({
   requirement: Requirement;
   mode: "demo" | "live";
   hasDetail: boolean;
-  onUseDraft: (result: AgentResearch) => void;
+  onUseDraft: (result: AgentResearch & { receipt: string }) => void;
 }) {
-  const [result, setResult] = useState<AgentResearch | null>(null);
+  const [result, setResult] = useState<(AgentResearch & { receipt: string }) | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   async function run() {
@@ -89,31 +90,10 @@ export default function ResearchAgent({
                 : "search calls"}{" "}
             · table unchanged
           </p>
-          <ol aria-label="Agent action trace">
-            {result.trace.map((step, i) => (
-              <li key={i}>
-                <strong>{step.action}</strong>
-                <p>{step.observation}</p>
-              </li>
-            ))}
-          </ol>
-          {result.clues.length > 0 && (
-            <div>
-              <h4>Research clues to inspect</h4>
-              {result.clues.map((clue) => (
-                <article key={clue.url}>
-                  <a href={clue.url} target="_blank" rel="noopener noreferrer">
-                    {clue.title}
-                  </a>
-                  <p>{clue.excerpt}</p>
-                  <small>
-                    {clue.domain} · retrieved{" "}
-                    {clue.retrievedAt.slice(0, 16).replace("T", " ")} UTC
-                  </small>
-                </article>
-              ))}
-            </div>
-          )}
+          <ResearchBriefView run={result} />
+          <details className="agent-trace"><summary>Inspect agent action trace</summary>
+            <ol aria-label="Agent action trace">{result.trace.map((step, i) => <li key={i}><strong>{step.action}</strong><p>{step.observation}</p></li>)}</ol>
+          </details>
           <p>{result.stoppingReason}</p>
           <button
             type="button"

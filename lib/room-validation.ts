@@ -18,6 +18,7 @@ export const createRoomSchema = z.object({
   datasetMode: z.enum(["demo", "live"]),
   requirement,
   question: z.string().trim().min(10).max(1500).optional(),
+  researchReceipt: z.string().min(40).max(32000).optional(),
   venue: z.object({
     id: z.string().min(1).max(200),
     name: z.string().min(1).max(300),

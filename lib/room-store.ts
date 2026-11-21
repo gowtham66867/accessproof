@@ -1,3 +1,4 @@
+import type { AgentResearch } from "./agent";
 import { DatabaseSync } from "node:sqlite";
 import type { Firestore } from "@google-cloud/firestore";
 import { mkdirSync } from "node:fs";
@@ -18,6 +19,7 @@ export type StoredRoom = {
   venue: Venue;
   datasetMode: "demo" | "live";
   requirement: Requirement;
+  research?: AgentResearch;
   visitorHash: string;
   representativeHash: string;
   visitorId: string;
@@ -178,6 +180,7 @@ export async function roomSnapshot(
     datasetMode: room.datasetMode,
     requirement: room.requirement,
     messages,
+    ...(room.research ? { research: room.research } : {}),
     createdAt: room.createdAt,
     expiresAt: room.expiresAt,
   };

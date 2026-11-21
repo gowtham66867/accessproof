@@ -1,3 +1,4 @@
+import { buildResearchBrief, type ResearchBrief } from "./research-brief";
 import {
   evidenceStatus,
   requirements,
@@ -32,6 +33,7 @@ export type AgentResearch = {
   statusBefore: Status;
   trace: AgentStep[];
   clues: ResearchClue[];
+  brief: ResearchBrief;
   draftQuestion: string;
   stoppingReason: string;
   callsUsed: number;
@@ -193,10 +195,13 @@ export async function runResearchAgent(
       "The selected feature already has a supporting report without a contradiction. Confirm current conditions with the representative if needed.",
     );
   }
+  const brief = buildResearchBrief(input.venue, input.requirement, clues);
   let draftQuestion =
     (statusBefore === "conflicting"
       ? "Earlier reports disagree about this feature. Please confirm current conditions. "
       : "") + questionFor(input.requirement);
+  if (input.requirement === "restroom" && evidenceStatus(input.venue.evidence.entrance) === "supported")
+    draftQuestion = "The entrance has a supporting report; the toilet route is still a separate check. " + draftQuestion;
   draftQuestion +=
     " Please confirm whether the route is clear of stored items and available to visitors today.";
   if (clues.length)
@@ -227,6 +232,7 @@ export async function runResearchAgent(
     statusBefore,
     trace,
     clues,
+    brief,
     draftQuestion,
     stoppingReason,
     callsUsed,

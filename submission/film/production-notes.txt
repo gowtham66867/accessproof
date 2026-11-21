@@ -5,3 +5,6 @@ Original motion graphics and procedural ambient soundtrack. Product visuals are 
 Creative direction uses the existing Oriane caption/transcript research in accessproof-campaign/oriane-observations.txt: practical access details, expectation versus reality, and the original hook Five stars. Three unanswered questions. No creator footage or celebrity voice used. No new Oriane search credits needed.
 Research agent is bounded adaptive policy, no LLM planner. Reports are attributed claims, not certification. Business model remains a hypothesis.
 Google neural voice pricing documentation: https://cloud.google.com/text-to-speech/pricing
+
+Cited brief / timeline revision
+The film now includes an actual real-café Tavily source excerpt and the final hosted fictional demo with signed research receipt, human approval, durable timeline and attributed cell update. Native animated milestone labels accompany cropped before/after product captures; this is an edited demonstration, not continuous screen recording. 34 automated tests passed; real Tavily and hosted Nexconn workflows were checked, including unsure replies, conflicts, retry deduplication and refresh recovery.
