@@ -286,7 +286,7 @@ export default function AccessProof({ initial }: { initial: SearchResult }) {
           </p>
         </div>
         <div className="sidebar-footer">
-          BEYOND 9TO5 BUILDATHON<span>AccessProof · MVP</span>
+          GLOBAL AI HACKATHON<span>AccessProof · MVP</span>
         </div>
       </aside>
 
